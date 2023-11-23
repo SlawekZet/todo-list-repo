@@ -1,0 +1,41 @@
+label {
+  display: flex;
+  width: 100%;
+  background-color: white;
+  padding: 1.5rem;
+}
+
+.todo {
+  padding-left: 1.5rem;
+  font-size: 1.125rem;
+  color: var(--very-dark-grayish-blue);
+  font-weight: 400;
+}
+
+.completed {
+  color: var(--light-grayish-blue);
+  text-decoration: line-through;
+}
+
+.todo-element {
+  display: flex;
+  background-color: white;
+  padding-right: 1rem;
+}
+
+.edit-save-buton,
+.delete-button,
+.add-todo-button {
+  margin: 1rem 1rem;
+  font-family: inherit;
+  border: none;
+  background-color: inherit;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button {
+  font-size: 1rem;
+}

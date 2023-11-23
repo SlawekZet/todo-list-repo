@@ -1,0 +1,39 @@
+.message {
+  width: 100%;
+  padding: 2rem 0;
+  text-align: center;
+  background-color: white;
+  border-radius: 0.4rem;
+}
+
+.button {
+  background-color: inherit;
+  font: inherit;
+  border: none;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.todo-list-lower-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background-color: white;
+  border-top: 1px solid var(--light-grayish-blue);
+}
+
+.todo-list-lower-bar-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.secondary {
+  font-size: 0.875rem;
+  color: var(--dark-grayish-blue);
+}
+
+.active-filter {
+  color: var(--bright-blue);
+}
