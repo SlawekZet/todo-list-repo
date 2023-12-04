@@ -4,6 +4,7 @@ import "./TodoInput.css";
 
 export const TodoInput = ({ handleAddTodo, todos }) => {
   const [label, setLabel] = useState("");
+  const [inputError, setInputError] = useState(false);
 
   const handleUpdateLabel = (e) => setLabel(e.target.value);
 
@@ -17,9 +18,16 @@ export const TodoInput = ({ handleAddTodo, todos }) => {
 
   const handleAddTodoClick = (e) => {
     e.preventDefault();
+    const chars =
+      "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=<>?/{}[]|:;,";
+    if (!label.split("").some((e) => chars.includes(e))) {
+      setLabel("");
+      return setInputError(true);
+    }
     const todo = createTodo(label);
     handleAddTodo(todo);
     setLabel("");
+    setInputError(false);
   };
 
   return (
@@ -41,6 +49,11 @@ export const TodoInput = ({ handleAddTodo, todos }) => {
             </button>
           )}
         </form>
+        {inputError ? (
+          <div className="error-section">
+            Invalid input. Please enter at least one character or word!
+          </div>
+        ) : null}
       </section>
     </>
   );

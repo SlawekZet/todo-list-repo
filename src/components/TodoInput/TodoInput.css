@@ -18,6 +18,20 @@ input {
   background: inherit;
 }
 
+.error-section {
+  width: 100%;
+  font: inherit;
+  font-size: 1rem;
+  border-radius: 7px;
+  color: red;
+  text-align: center;
+  font-weight: 400;
+  margin-top: 1em;
+  letter-spacing: -0.01563rem;
+  background-color: var(--secondary-background);
+  padding: 1em;
+}
+
 .todo-input {
   padding-left: 1.5em;
 }
@@ -42,5 +56,4 @@ input {
 
 .add-todo-button {
   margin: 0 1rem 0 0;
-  /* padding: 0.5rem; */
 }
