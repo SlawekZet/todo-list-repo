@@ -8,27 +8,38 @@
   /* Primary  */
 
   --bright-blue: hsl(220, 98%, 61%);
-  --check-background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+  --check-background: linear-gradient: hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
 
   /* LightTheme */
 
-  --very-light-gray: hsl(0, 0%, 98%);
-  --very-light-grayish-blue: hsl(236, 33%, 92%);
-  --light-grayish-blue: hsl(233, 11%, 84%);
-  --dark-grayish-blue: hsl(236, 9%, 61%);
-  --very-dark-grayish-blue: hsl(235, 19%, 35%);
-
-  /* Dark Theme */
-
-  --very-dark-blue: hsl(235, 21%, 11%);
-  --very-dark-desaturated-blue: hsl(235, 24%, 19%);
-  --light-grayish-blue-darktheme: hsl(234, 39%, 85%);
-  --light-grayish-blue-hover: hsl(236, 33%, 92%);
-  --dark-grayish-blue: hsl(234, 11%, 52%);
-  --very-dark-grayish-blue: hsl(233, 14%, 35%);
+  --background: #fafafa;
+  --secondary-background: #fff;
+  --divider: #e3e4f1;
+  --inactive-font: #9495a5;
+  --inactive-placeholder-font: #9495a5;
+  --primary-font: #393a4b;
+  --secondary-font: #494c6b;
+  --completed-font: #d1d2da;
+  --white-elements: #fff;
+  --shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
 
   font-family: "Josefin Sans", sans-serif;
   font-size: 18px;
+}
+
+[data-theme="dark"] {
+  /* Dark Theme */
+
+  --background: #171823;
+  --secondary-background: #25273d;
+  --divider: #393a4b;
+  --primary-font: #c8cbe7;
+  --secondary-font: #c8cbe7;
+  --completed-font: #4d5067;
+  --inactive-font: #5b5e7e;
+  --inactive-placeholder-font: #767992;
+  --white-elements: #fff;
+  --shadow: none;
 }
 
 html {
@@ -36,7 +47,7 @@ html {
 }
 
 body {
-  background-color: var(--very-light-gray);
+  background-color: var(--background);
   /* width: 100%;
   height: 100vh; */
 }

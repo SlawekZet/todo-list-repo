@@ -26,7 +26,7 @@ export const TodoInput = ({ handleAddTodo, todos }) => {
     <>
       <section className="todo-input-wrapper">
         <form className="input-wrapper">
-          <img src="./icon-circle.svg" alt="circle icon" />
+          <div className="circle-icon"></div>
           <input
             type="text"
             className="todo-input"

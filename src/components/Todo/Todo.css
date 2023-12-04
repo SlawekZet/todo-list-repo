@@ -1,25 +1,31 @@
 label {
   display: flex;
   width: 100%;
-  background-color: white;
-  padding: 1.5rem;
+  background-color: var(--secondary-background);
+  padding: 1.2em;
+}
+
+input {
+  padding: 0;
 }
 
 .todo {
-  padding-left: 1.5rem;
-  font-size: 1.125rem;
-  color: var(--very-dark-grayish-blue);
+  display: flex;
+  align-items: center;
+  padding-left: 1.5em;
+  font-size: 1.125em;
+  color: var(--secondary-font);
   font-weight: 400;
 }
 
 .completed {
-  color: var(--light-grayish-blue);
+  color: var(--completed-font);
   text-decoration: line-through;
 }
 
 .todo-element {
   display: flex;
-  background-color: white;
+  background-color: var(--secondary-background);
   padding-right: 1rem;
 }
 
@@ -30,6 +36,7 @@ label {
   font-family: inherit;
   border: none;
   background-color: inherit;
+  color: var(--secondary-font);
 }
 
 button:hover {
