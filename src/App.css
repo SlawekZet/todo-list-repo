@@ -67,7 +67,7 @@ main {
 }
 
 .light-background {
-  background-image: url(./bg-desktop-light.jpg);
+  background-image: url(../public/bg-desktop-light.jpg);
 }
 
 .dark-background {

@@ -21,9 +21,7 @@ export const TodoList = () => {
 
   useEffect(() => {
     let savedTodos = localStorage.getItem("localTodos");
-    console.log("Saved Todos from Local Storage:", savedTodos);
     if (savedTodos && savedTodos.length > 0) {
-      console.log("Parsing Todos...");
       setTodos(JSON.parse(savedTodos));
     }
   }, []);
@@ -32,11 +30,9 @@ export const TodoList = () => {
 
   useEffect(() => {
     const localTodos = JSON.stringify(todos);
-    console.log("Todos to save to the LocalStorage:", localTodos);
+
     localStorage.setItem("localTodos", localTodos);
   }, [todos]);
-
-  console.log(todos);
 
   //Udpating todo = editing and marking as complete
 
