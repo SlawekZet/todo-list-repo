@@ -80,15 +80,15 @@ export const TodoList = () => {
 
   return (
     <>
-      <ul>
-        <TodoInput handleAddTodo={handleAddTodo} todos={todos} />
-        <div className="todo-list-wrapper">
-          {todos.length === 0 ? (
-            <div className="message">
-              <p>The list is empty</p>
-            </div>
-          ) : filter === "all" ? (
-            todos.map((todo, index) => (
+      <TodoInput handleAddTodo={handleAddTodo} todos={todos} />
+      <div className="todo-list-wrapper">
+        {todos.length === 0 ? (
+          <div className="message">
+            <p>The list is empty</p>
+          </div>
+        ) : filter === "all" ? (
+          <ul>
+            {todos.map((todo, index) => (
               <Todo
                 key={index}
                 todo={todo}
@@ -98,9 +98,11 @@ export const TodoList = () => {
                 // todos={todos}
                 // index={index}
               />
-            ))
-          ) : filter === "active" ? (
-            todos
+            ))}
+          </ul>
+        ) : filter === "active" ? (
+          <ul>
+            {todos
               .filter((todo) => !todo.completed)
               .map((todo, index) => (
                 <Todo
@@ -112,9 +114,11 @@ export const TodoList = () => {
                   // todos={todos}
                   // index={index}
                 />
-              ))
-          ) : filter === "completed" ? (
-            todos
+              ))}
+          </ul>
+        ) : filter === "completed" ? (
+          <ul>
+            {todos
               .filter((todo) => todo.completed)
               .map((todo, index) => (
                 <Todo
@@ -126,16 +130,16 @@ export const TodoList = () => {
                   // todos={todos}
                   // index={index}
                 />
-              ))
-          ) : null}
-          <TodoListLowerBar
-            todos={todos}
-            filter={filter}
-            handleTodosChange={handleTodosChange}
-            handleFilterChange={handleFilterChange}
-          />
-        </div>
-      </ul>
+              ))}
+          </ul>
+        ) : null}
+        <TodoListLowerBar
+          todos={todos}
+          filter={filter}
+          handleTodosChange={handleTodosChange}
+          handleFilterChange={handleFilterChange}
+        />
+      </div>
     </>
   );
 };
