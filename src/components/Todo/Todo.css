@@ -26,7 +26,7 @@ input {
 .todo-element {
   display: flex;
   background-color: var(--secondary-background);
-  padding-right: 1rem;
+  padding-right: 1em;
 }
 
 .edit-save-buton,
@@ -45,4 +45,20 @@ button:hover {
 
 button {
   font-size: 1rem;
+}
+
+@media only screen and (max-width: 450px) {
+  .edit-save-buton,
+  .add-todo-button {
+    font-size: 12px;
+  }
+
+  .delete-button img {
+    width: 12px;
+    height: 12px;
+  }
+
+  .todo-element {
+    padding-right: 0;
+  }
 }

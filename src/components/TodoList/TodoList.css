@@ -1,6 +1,6 @@
 .message {
   width: 100%;
-  padding: 2rem 0;
+  padding: 2em 0;
   text-align: center;
   background-color: var(--secondary-background);
   color: var(--secondary-font);
@@ -26,7 +26,7 @@
 .todo-list-lower-bar {
   display: flex;
   justify-content: space-between;
-  padding: 1rem 1.5rem;
+  padding: 1em 1.5em;
   background-color: var(--secondary-background);
   border-top: 1px solid var(--divider);
 }
@@ -46,7 +46,6 @@
 }
 
 input[type="checkbox"] {
-  /* Add if not using autoprefixer */
   -webkit-appearance: none;
   appearance: none;
   display: grid;
@@ -82,4 +81,55 @@ input[type="checkbox"]:checked {
 
 .todo-element + .todo-element {
   border-top: 1px solid var(--divider);
+}
+
+.mobile {
+  display: none;
+}
+
+.lower-bar-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-radius: 7px;
+  padding: 1rem 1.5rem;
+  background-color: var(--secondary-background);
+  margin-top: 1em;
+}
+
+label input[type="text"] {
+  padding-left: 1.5em;
+}
+
+@media only screen and (max-width: 600px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: flex;
+  }
+
+  .todo-list-lower-bar {
+    border-radius: 0 0 7px 7px;
+    padding: 1.5em;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  body {
+    font-size: 12px;
+  }
+
+  input[type="checkbox"] {
+    transform: translateY(0.3em);
+  }
+
+  .secondary {
+    font-size: 0.85rem;
+  }
+
+  input {
+    font-size: 0.75rem;
+  }
 }

@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import "./Todo.css";
 
 // THINGS THAT ARE COMMENTED OUT ARE PART OF DRAG AND DROP FUNCTIONALITY, THAT IS NOT WORKING YET
