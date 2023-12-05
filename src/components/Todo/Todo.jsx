@@ -60,7 +60,7 @@ export const Todo = ({
 
   return (
     <>
-      <div
+      <li
         className="todo-element"
         id={todo.id}
         // onDragStart={(e) => dragStart(e, index)}
@@ -98,7 +98,7 @@ export const Todo = ({
             <img src="./icon-cross.svg" alt="cross, delete icon" />
           </button>
         ) : null}
-      </div>
+      </li>
     </>
   );
 };
