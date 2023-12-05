@@ -8,12 +8,12 @@ import "./TodoList.css";
 
 export const TodoList = () => {
   const [todos, setTodos] = useState([
-    { id: 1, label: "Testowy todo", completed: false },
-    { id: 2, label: "Drugi testowy todo", completed: false },
-    { id: 3, label: "Trzeci testowy todo", completed: false },
-    { id: 4, label: "Czwarty testowy todo", completed: false },
-    { id: 5, label: "Piąty testowy todo", completed: false },
-    { id: 6, label: "Szósty testowy todo", completed: false },
+    { id: 1, label: "Complete online JavaScript course", completed: true },
+    { id: 2, label: "Jog around the park 3x", completed: false },
+    { id: 3, label: "10 minutes meditation", completed: false },
+    { id: 4, label: "Read for 1 hour", completed: false },
+    { id: 5, label: "Pick up groceries", completed: false },
+    { id: 6, label: "Complete Todo App on Frontend Mentor", completed: false },
   ]);
   const [filter, setFilter] = useState("all");
 
