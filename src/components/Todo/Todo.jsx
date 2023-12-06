@@ -74,6 +74,7 @@ export const Todo = ({
               <input
                 type="checkbox"
                 id={`todo-checkbox-${todo.id}`}
+                name={`todo-checkbox-${todo.id}`}
                 checked={todo.completed}
                 onChange={handleCheckboxClick}
               />
@@ -84,6 +85,7 @@ export const Todo = ({
             <label htmlFor={`todo-input-${todo.id}`}>
               <input
                 id={`todo-input-${todo.id}`}
+                name={`todo-input-${todo.id}`}
                 type="text"
                 value={todo.label}
                 onChange={handleUpdateLabel}
