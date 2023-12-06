@@ -68,28 +68,33 @@ export const Todo = ({
         // onDragEnd={drop}
         // draggable
       >
-        <label htmlFor={todo.label}>
+        <div className="todo-element-input-wrapper">
           <div>
-            <input
-              type="checkbox"
-              id={todo.label}
-              checked={todo.completed}
-              onChange={handleCheckboxClick}
-            />
-            <span />
+            <label htmlFor={`todo-checkbox-${todo.id}`}>
+              <input
+                type="checkbox"
+                id={`todo-checkbox-${todo.id}`}
+                checked={todo.completed}
+                onChange={handleCheckboxClick}
+              />
+              <span />
+            </label>
           </div>
           {editing === true ? (
-            <input
-              type="text"
-              value={todo.label}
-              onChange={handleUpdateLabel}
-            />
+            <label htmlFor={`todo-input-${todo.id}`}>
+              <input
+                id={`todo-input-${todo.id}`}
+                type="text"
+                value={todo.label}
+                onChange={handleUpdateLabel}
+              />
+            </label>
           ) : (
             <span className={todo.completed ? "todo completed" : "todo"}>
               {todo.label}
             </span>
           )}
-        </label>
+        </div>
         <button className="edit-save-buton" onClick={handleEditing}>
           {editing ? "Save" : "Edit"}
         </button>
